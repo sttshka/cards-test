@@ -26,6 +26,7 @@
 
 @keyframes slideUp {
   0% {
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0);
     transform: translateY(0px) translateX(0px);
   }
 
@@ -33,7 +34,11 @@
     transform: translateZ(-290px) translateX(-50px) translateY(10px);
   }
 
+  80% {
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  }
   100% {
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
     transform: translateY(-300) translateX(0px);
     @media screen and (max-width: 500px) {
       transform: translateY(-200) translateX(0px);
