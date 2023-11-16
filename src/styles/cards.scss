@@ -23,6 +23,7 @@
   opacity: 0.5;
   outline: none;
   border-radius: 20px;
+  transition: all 0.3s ease;
 
   &__back,
   &__front {
@@ -82,6 +83,15 @@
     animation: 1s ease-in-out slideUp;
 
     transform: translateY(-300px);
+
+    &:first-child {
+      transform: translateY(-300px) translateX(100%) rotate(-15deg);
+    }
+
+    &:last-child {
+      transform: translateY(-300px) translateX(-100%) rotate(15deg);
+    }
+
     & > .card__front {
       transform: rotateY(0deg);
       animation: 0.7s ease flipTo;
@@ -90,6 +100,8 @@
       transform: rotateY(180deg);
       animation: 0.7s ease flipOver;
     }
+
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
 
     @media screen and (max-width: 500px) {
       transform: translateY(-200px) translateX(0px);
